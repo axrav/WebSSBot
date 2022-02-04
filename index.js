@@ -6,15 +6,10 @@ const fs  = require('fs');
 const {webss} = require("./utils");
 const {inline} = require("./utils")
 const keyboard = inline();
-bot.command('start',
+bot.command(['start','help],
     async (ctx) =>
     { await ctx.reply(
         `Hey [${ctx.message.from.first_name}](tg://user?id=${ctx.message.from.id}), I am a simple Bot to capture web screenshots,To capture one send /webss and your link`, {parse_mode: "MarkdownV2",reply_markup: keyboard, reply_to_message_id: ctx.msg.message_id}
-)})
-bot.command('help',
-    async (ctx) =>
-    { await ctx.reply(
-        `Hey [${ctx.message.from.first_name}](tg://user?id=${ctx.message.from.id}), I am a simple Bot to capture web screenshots,To capture one send /webss and your link`, {parse_mode: "MarkdownV2",reply_markup : keyboard, reply_to_message_id: ctx.msg.message_id}
 )})
 bot.command('webss', 
     async (ctx) =>
