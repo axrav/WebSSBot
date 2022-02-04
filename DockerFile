@@ -1,0 +1,6 @@
+FROM node:17-buster-slim
+RUN apt update && apt upgrade -y && apt-get install libnss3 libnss3-nssdb libnss3-tools -y
+COPY . /app
+WORKDIR /app
+RUN npm install
+CMD npm start

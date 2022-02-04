@@ -1,0 +1,18 @@
+{
+    "name": "WebSSBot",
+    "description": "A WebSS Bot",
+    "keywords": ["telegram", "bot"],
+    "repository": "https://github.com/VegetaxD/WebSSBot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "A Telegram Bot Token,you can generate it from @botfather",
+            "required": true
+        } 
+    },
+    "buildpacks": [{
+        "url": "heroku/nodejs"
+    },
+    {   "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    }
+]
+}

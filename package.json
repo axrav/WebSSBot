@@ -1,0 +1,27 @@
+{
+  "name": "webssbot",
+  "version": "1.0.0",
+  "description": "A simple bot to take webss",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VegetaxD/WebSSBot.git"
+  },
+  "keywords": [
+    "telegram"
+  ],
+  "author": "VegetaxD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VegetaxD/WebSSBot/issues"
+  },
+  "homepage": "https://github.com/VegetaxD/WebSSBot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "grammy": "^1.7.0",
+    "puppeteer": "^13.1.3"
+  }
+}
