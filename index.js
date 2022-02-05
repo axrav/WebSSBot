@@ -13,7 +13,7 @@ bot.command(['start','help'],
 )})
 bot.command('webss', 
     async (ctx) =>
-    { const link = (ctx.message.text.split(" "))[1];
+    { const link = (ctx.message.text.split(/\s/))[1];
       const reg = "(^http:/\/\|https:/\/\)(.+)$";
       if (link === undefined || !link.match(reg) ){
         await ctx.reply('Please Provide a valid URL starting with http or https to capture screenshot', {reply_to_message_id: ctx.msg.message_id});
@@ -29,5 +29,5 @@ bot.command('webss',
           await ctx.reply('Unable to Capture Screenshot,Try again later!', {reply_to_message_id: ctx.msg.message_id});
     }
 })
-bot.catch(err => console.error(err));
+bot.catch(console.error(err));
 bot.start();
