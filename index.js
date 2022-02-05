@@ -29,5 +29,5 @@ bot.command('webss',
           await ctx.reply('Unable to Capture Screenshot,Try again later!', {reply_to_message_id: ctx.msg.message_id});
     }
 })
-bot.catch(console.error(err));
+bot.catch(console.error);
 bot.start();
