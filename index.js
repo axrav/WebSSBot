@@ -14,7 +14,7 @@ bot.command(['start','help'],
 bot.command('webss', 
     async (ctx) =>
     { const link = (ctx.message.text.split(/\s/))[1];
-      const reg = "(^http:/\/\|https:/\/\)(.+)$";
+      const reg = "^(http|https):\/\/(.+)$";
       if (link === undefined || !link.match(reg) ){
         await ctx.reply('Please Provide a valid URL starting with http or https to capture screenshot', {reply_to_message_id: ctx.msg.message_id});
         return;
